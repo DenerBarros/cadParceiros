@@ -1,0 +1,17 @@
+C:\Users\dener\source\repos\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\cadParceiros.exe
+C:\Users\dener\source\repos\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\cadParceiros.deps.json
+C:\Users\dener\source\repos\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\cadParceiros.runtimeconfig.json
+C:\Users\dener\source\repos\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\cadParceiros.dll
+C:\Users\dener\source\repos\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\cadParceiros.pdb
+C:\Users\dener\source\repos\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.csproj.AssemblyReference.cache
+C:\Users\dener\source\repos\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.Form1.resources
+C:\Users\dener\source\repos\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.csproj.GenerateResource.cache
+C:\Users\dener\source\repos\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dener\source\repos\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.AssemblyInfoInputs.cache
+C:\Users\dener\source\repos\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.AssemblyInfo.cs
+C:\Users\dener\source\repos\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.csproj.CoreCompileInputs.cache
+C:\Users\dener\source\repos\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.dll
+C:\Users\dener\source\repos\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\refint\cadParceiros.dll
+C:\Users\dener\source\repos\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.pdb
+C:\Users\dener\source\repos\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.genruntimeconfig.cache
+C:\Users\dener\source\repos\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\ref\cadParceiros.dll
