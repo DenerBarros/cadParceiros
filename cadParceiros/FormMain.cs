@@ -7,6 +7,16 @@ namespace cadParceiros
             InitializeComponent();
         }
 
+        private void Informar(string mensagem)
+        {
+            MessageBox.Show(mensagem, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private bool Confirmar(string pergunta)
+        {
+            return MessageBox.Show(pergunta, "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
