@@ -93,6 +93,7 @@
             this.tbEmailSolicitacao.Name = "tbEmailSolicitacao";
             this.tbEmailSolicitacao.Size = new System.Drawing.Size(220, 23);
             this.tbEmailSolicitacao.TabIndex = 1;
+            this.tbEmailSolicitacao.TextChanged += new System.EventHandler(this.tbEmailSolicitacao_TextChanged);
             // 
             // label2
             // 
@@ -202,6 +203,7 @@
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(220, 23);
             this.tbEmail.TabIndex = 13;
+            this.tbEmail.TextChanged += new System.EventHandler(this.tbEmail_TextChanged);
             // 
             // label8
             // 
@@ -496,6 +498,7 @@
             this.tbCPFCNPJ.Name = "tbCPFCNPJ";
             this.tbCPFCNPJ.Size = new System.Drawing.Size(220, 23);
             this.tbCPFCNPJ.TabIndex = 9;
+            this.tbCPFCNPJ.TextChanged += new System.EventHandler(this.tbCPFCNPJ_TextChanged);
             // 
             // FormMain
             // 

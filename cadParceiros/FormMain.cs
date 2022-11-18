@@ -1,7 +1,12 @@
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Text.RegularExpressions;
+using static cadParceiros.Validador;
+
 namespace cadParceiros
 {
     public partial class FormMain : Form
     {
+    
         public FormMain()
         {
             InitializeComponent();
@@ -45,6 +50,30 @@ namespace cadParceiros
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void tbEmailSolicitacao_TextChanged(object sender, EventArgs e)
+        {
+            if (Email.Validar(tbEmailSolicitacao.Text))
+                tbEmailSolicitacao.BackColor = default(Color);
+            else
+                tbEmailSolicitacao.BackColor = Color.Red;
+        }
+
+        private void tbCPFCNPJ_TextChanged(object sender, EventArgs e)
+        {
+            if(Cpf.Validar(tbCPFCNPJ.Text))
+                tbCPFCNPJ.BackColor = default(Color);
+            else
+                tbCPFCNPJ.BackColor = Color.Red;
+        }
+
+        private void tbEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (Email.Validar(tbEmail.Text))
+                tbEmail.BackColor = default(Color);
+            else
+                tbEmail.BackColor = Color.Red;
         }
     }
 }
