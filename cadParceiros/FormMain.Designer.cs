@@ -74,6 +74,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEmailCadastro = new System.Windows.Forms.Button();
             this.tbCPFCNPJ = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.cbxParceiros = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -81,7 +83,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 32);
+            this.label1.Location = new System.Drawing.Point(131, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 15);
             this.label1.TabIndex = 0;
@@ -89,7 +91,7 @@
             // 
             // tbEmailSolicitacao
             // 
-            this.tbEmailSolicitacao.Location = new System.Drawing.Point(204, 29);
+            this.tbEmailSolicitacao.Location = new System.Drawing.Point(254, 87);
             this.tbEmailSolicitacao.Name = "tbEmailSolicitacao";
             this.tbEmailSolicitacao.Size = new System.Drawing.Size(220, 23);
             this.tbEmailSolicitacao.TabIndex = 1;
@@ -97,7 +99,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(483, 32);
+            this.label2.Location = new System.Drawing.Point(533, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 15);
             this.label2.TabIndex = 2;
@@ -105,7 +107,7 @@
             // 
             // tbNomeParceiro
             // 
-            this.tbNomeParceiro.Location = new System.Drawing.Point(592, 29);
+            this.tbNomeParceiro.Location = new System.Drawing.Point(642, 87);
             this.tbNomeParceiro.MaxLength = 200;
             this.tbNomeParceiro.Name = "tbNomeParceiro";
             this.tbNomeParceiro.Size = new System.Drawing.Size(374, 23);
@@ -114,7 +116,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(131, 91);
+            this.label3.Location = new System.Drawing.Point(181, 149);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 15);
             this.label3.TabIndex = 4;
@@ -127,7 +129,7 @@
             this.cbTipoParceiro.Items.AddRange(new object[] {
             "Cliente",
             "Fornecedor"});
-            this.cbTipoParceiro.Location = new System.Drawing.Point(229, 88);
+            this.cbTipoParceiro.Location = new System.Drawing.Point(279, 146);
             this.cbTipoParceiro.Name = "cbTipoParceiro";
             this.cbTipoParceiro.Size = new System.Drawing.Size(121, 23);
             this.cbTipoParceiro.TabIndex = 5;
@@ -136,7 +138,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(388, 91);
+            this.label4.Location = new System.Drawing.Point(438, 149);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 15);
             this.label4.TabIndex = 6;
@@ -150,7 +152,7 @@
             this.cbTipoPessoa.Items.AddRange(new object[] {
             "Física",
             "Jurídica"});
-            this.cbTipoPessoa.Location = new System.Drawing.Point(479, 88);
+            this.cbTipoPessoa.Location = new System.Drawing.Point(529, 146);
             this.cbTipoPessoa.Name = "cbTipoPessoa";
             this.cbTipoPessoa.Size = new System.Drawing.Size(128, 23);
             this.cbTipoPessoa.TabIndex = 7;
@@ -158,7 +160,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(626, 91);
+            this.label5.Location = new System.Drawing.Point(676, 149);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 15);
             this.label5.TabIndex = 8;
@@ -167,7 +169,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(434, 145);
+            this.label6.Location = new System.Drawing.Point(701, 19);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 15);
             this.label6.TabIndex = 10;
@@ -181,7 +183,7 @@
             "Cadastrado",
             "Solicitado",
             "Cancelado"});
-            this.cbStatus.Location = new System.Drawing.Point(479, 137);
+            this.cbStatus.Location = new System.Drawing.Point(746, 16);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(121, 23);
             this.cbStatus.TabIndex = 11;
@@ -189,7 +191,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(219, 201);
+            this.label7.Location = new System.Drawing.Point(219, 224);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(39, 15);
             this.label7.TabIndex = 12;
@@ -198,7 +200,7 @@
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(264, 193);
+            this.tbEmail.Location = new System.Drawing.Point(264, 216);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(220, 23);
             this.tbEmail.TabIndex = 13;
@@ -206,7 +208,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(556, 196);
+            this.label8.Location = new System.Drawing.Point(556, 219);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 15);
             this.label8.TabIndex = 14;
@@ -214,7 +216,7 @@
             // 
             // tbTelefone
             // 
-            this.tbTelefone.Location = new System.Drawing.Point(617, 193);
+            this.tbTelefone.Location = new System.Drawing.Point(617, 216);
             this.tbTelefone.Name = "tbTelefone";
             this.tbTelefone.Size = new System.Drawing.Size(220, 23);
             this.tbTelefone.TabIndex = 15;
@@ -465,7 +467,7 @@
             // 
             // btnCadastro
             // 
-            this.btnCadastro.Location = new System.Drawing.Point(264, 653);
+            this.btnCadastro.Location = new System.Drawing.Point(231, 657);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(140, 23);
             this.btnCadastro.TabIndex = 21;
@@ -474,7 +476,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(630, 653);
+            this.btnCancelar.Location = new System.Drawing.Point(677, 657);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(157, 23);
             this.btnCancelar.TabIndex = 22;
@@ -483,25 +485,45 @@
             // 
             // btnEmailCadastro
             // 
-            this.btnEmailCadastro.Location = new System.Drawing.Point(413, 232);
+            this.btnEmailCadastro.Location = new System.Drawing.Point(427, 657);
             this.btnEmailCadastro.Name = "btnEmailCadastro";
-            this.btnEmailCadastro.Size = new System.Drawing.Size(232, 23);
+            this.btnEmailCadastro.Size = new System.Drawing.Size(223, 23);
             this.btnEmailCadastro.TabIndex = 23;
             this.btnEmailCadastro.Text = "Enviar e-mail para solicitar cadastro";
             this.btnEmailCadastro.UseVisualStyleBackColor = true;
             // 
             // tbCPFCNPJ
             // 
-            this.tbCPFCNPJ.Location = new System.Drawing.Point(707, 88);
+            this.tbCPFCNPJ.Location = new System.Drawing.Point(757, 146);
             this.tbCPFCNPJ.Name = "tbCPFCNPJ";
             this.tbCPFCNPJ.Size = new System.Drawing.Size(220, 23);
             this.tbCPFCNPJ.TabIndex = 9;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(168, 19);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(124, 15);
+            this.label21.TabIndex = 24;
+            this.label21.Text = "Parceiros de Negócios";
+            // 
+            // cbxParceiros
+            // 
+            this.cbxParceiros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxParceiros.FormattingEnabled = true;
+            this.cbxParceiros.Location = new System.Drawing.Point(301, 13);
+            this.cbxParceiros.Name = "cbxParceiros";
+            this.cbxParceiros.Size = new System.Drawing.Size(375, 23);
+            this.cbxParceiros.TabIndex = 25;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 717);
+            this.Controls.Add(this.cbxParceiros);
+            this.Controls.Add(this.label21);
             this.Controls.Add(this.btnEmailCadastro);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCadastro);
@@ -585,5 +607,7 @@
         private Button btnCancelar;
         private Button btnEmailCadastro;
         private TextBox tbCPFCNPJ;
+        private Label label21;
+        private ComboBox cbxParceiros;
     }
 }
