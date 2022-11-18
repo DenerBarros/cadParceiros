@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\dener\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\dener\\.nuget\\packages",
+      "C:\\Users\\dener.4022\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\dener.4022\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

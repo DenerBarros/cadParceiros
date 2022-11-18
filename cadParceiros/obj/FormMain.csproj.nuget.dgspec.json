@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dener\\CSharp\\cadParceiros\\cadParceiros\\cadParceiros.csproj": {}
+    "C:\\Dener\\CSharp\\cadParceiros\\cadParceiros\\FormMain.csproj": {}
   },
   "projects": {
-    "C:\\Dener\\CSharp\\cadParceiros\\cadParceiros\\cadParceiros.csproj": {
+    "C:\\Dener\\CSharp\\cadParceiros\\cadParceiros\\FormMain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dener\\CSharp\\cadParceiros\\cadParceiros\\cadParceiros.csproj",
-        "projectName": "cadParceiros",
-        "projectPath": "C:\\Dener\\CSharp\\cadParceiros\\cadParceiros\\cadParceiros.csproj",
+        "projectUniqueName": "C:\\Dener\\CSharp\\cadParceiros\\cadParceiros\\FormMain.csproj",
+        "projectName": "FormMain",
+        "projectPath": "C:\\Dener\\CSharp\\cadParceiros\\cadParceiros\\FormMain.csproj",
         "packagesPath": "C:\\Users\\dener.4022\\.nuget\\packages\\",
         "outputPath": "C:\\Dener\\CSharp\\cadParceiros\\cadParceiros\\obj\\",
         "projectStyle": "PackageReference",
