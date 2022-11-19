@@ -1,24 +1,24 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace cadParceiros.Data
+namespace cadParceiros.Data;
+
+public class MeuDBContext : DbContext
 {
-    public class MeuDBContext : DbContext
+    public DbSet<Parceiro> Parceiros { get; set; }    
+    public MeuDBContext() : base()
     {
-        public DbSet<Parceiro> Parceiros { get; set; }
-        public MeuDBContext(DbContextOptions options) : base(options)
-        {
 
-        }
+    }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(MeuDBContext).Assembly);
-            base.OnModelCreating(modelBuilder);           
-        }
+    protected override void OnConfiguring(DbContextOptionsBuilder options)
+    {
+        options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Integrated Security=true;Database=CadastroParceiros;");           
+       
+    }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(MeuDBContext).Assembly);
+        base.OnModelCreating(modelBuilder);           
     }
 }

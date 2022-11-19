@@ -50,7 +50,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.tbEstadoC = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.tbBairro = new System.Windows.Forms.TextBox();
+            this.tbBairroC = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tbNumeroC = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -170,7 +170,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(701, 19);
+            this.label6.Location = new System.Drawing.Point(706, 16);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 15);
             this.label6.TabIndex = 10;
@@ -184,7 +184,7 @@
             "Cadastrado",
             "Solicitado",
             "Cancelado"});
-            this.cbStatus.Location = new System.Drawing.Point(746, 16);
+            this.cbStatus.Location = new System.Drawing.Point(744, 11);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(121, 23);
             this.cbStatus.TabIndex = 11;
@@ -245,7 +245,7 @@
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.tbEstadoC);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.tbBairro);
+            this.groupBox1.Controls.Add(this.tbBairroC);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.tbNumeroC);
             this.groupBox1.Controls.Add(this.label11);
@@ -293,12 +293,12 @@
             this.label13.TabIndex = 24;
             this.label13.Text = "Estado";
             // 
-            // tbBairro
+            // tbBairroC
             // 
-            this.tbBairro.Location = new System.Drawing.Point(720, 42);
-            this.tbBairro.Name = "tbBairro";
-            this.tbBairro.Size = new System.Drawing.Size(157, 23);
-            this.tbBairro.TabIndex = 23;
+            this.tbBairroC.Location = new System.Drawing.Point(720, 42);
+            this.tbBairroC.Name = "tbBairroC";
+            this.tbBairroC.Size = new System.Drawing.Size(157, 23);
+            this.tbBairroC.TabIndex = 23;
             // 
             // label12
             // 
@@ -475,6 +475,7 @@
             this.btnCadastro.TabIndex = 21;
             this.btnCadastro.Text = "Cadastrar";
             this.btnCadastro.UseVisualStyleBackColor = true;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // btnCancelar
             // 
@@ -519,6 +520,7 @@
             this.cbxParceiros.Name = "cbxParceiros";
             this.cbxParceiros.Size = new System.Drawing.Size(375, 23);
             this.cbxParceiros.TabIndex = 25;
+            this.cbxParceiros.SelectedIndexChanged += new System.EventHandler(this.cbxParceiros_SelectedIndexChanged);
             // 
             // FormMain
             // 
@@ -591,7 +593,7 @@
         private Label label14;
         private TextBox tbEstadoC;
         private Label label13;
-        private TextBox tbBairro;
+        private TextBox tbBairroC;
         private GroupBox groupBox2;
         private TextBox tbCidadeE;
         private Label label15;

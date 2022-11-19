@@ -8,7 +8,16 @@ public class Parceiro
     public string Documento { get; set; }
     public string Email { get; set; }
     public string Telefone { get; set; }
-    public Endereco EnderecoCobranca { get; set; }
-    public Endereco EnderecoEntrega { get; set; }
+
+    public Status StatusCadastro { get; set; }
+    public EnderecoCobranca EnderecoCobranca { get; set; }
+    public EnderecoEntrega EnderecoEntrega { get; set; }
+
+    public enum Status 
+    { 
+        Cadastrado,
+        Solicitado,
+        Cancelado
+    }
 
 }

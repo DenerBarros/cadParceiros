@@ -1,6 +1,12 @@
-﻿namespace cadParceiros;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public abstract class Endereco 
+namespace cadParceiros;
+
+public class EnderecoCobranca 
 {
     public int Id { get; set; }
     public string Cep { get; set; }
@@ -8,7 +14,6 @@ public abstract class Endereco
     public int Numero { get; set; }
     public string Bairro { get; set; }
     public string Cidade { get; set; }
-    public string Estado { get; set; }   
+    public string Estado { get; set; }
     public int ParceiroId { get; set; }
-    
 }
