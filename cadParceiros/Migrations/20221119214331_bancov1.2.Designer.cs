@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using cadParceiros.Data;
 
@@ -10,9 +11,11 @@ using cadParceiros.Data;
 namespace cadParceiros.Migrations
 {
     [DbContext(typeof(MeuDBContext))]
-    partial class MeuDBContextModelSnapshot : ModelSnapshot
+    [Migration("20221119214331_bancov1.2")]
+    partial class bancov12
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

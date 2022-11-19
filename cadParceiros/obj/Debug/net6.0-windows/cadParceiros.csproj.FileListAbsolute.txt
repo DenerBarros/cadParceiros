@@ -49,11 +49,6 @@ C:\Projetos\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\refint\cadParceir
 C:\Projetos\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.pdb
 C:\Projetos\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.genruntimeconfig.cache
 C:\Projetos\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\ref\cadParceiros.dll
-F:\Csharp\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\cadParceiros.exe
-F:\Csharp\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\cadParceiros.deps.json
-F:\Csharp\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\cadParceiros.runtimeconfig.json
-F:\Csharp\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\cadParceiros.dll
-F:\Csharp\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\cadParceiros.pdb
 F:\Csharp\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.csproj.AssemblyReference.cache
 F:\Csharp\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.FormMain.resources
 F:\Csharp\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.csproj.GenerateResource.cache
@@ -61,11 +56,11 @@ F:\Csharp\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.Genera
 F:\Csharp\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.AssemblyInfoInputs.cache
 F:\Csharp\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.AssemblyInfo.cs
 F:\Csharp\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.csproj.CoreCompileInputs.cache
-F:\Csharp\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.dll
-F:\Csharp\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\refint\cadParceiros.dll
-F:\Csharp\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.pdb
-F:\Csharp\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.genruntimeconfig.cache
-F:\Csharp\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\ref\cadParceiros.dll
+F:\Csharp\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\cadParceiros.exe
+F:\Csharp\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\cadParceiros.deps.json
+F:\Csharp\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\cadParceiros.runtimeconfig.json
+F:\Csharp\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\cadParceiros.dll
+F:\Csharp\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\cadParceiros.pdb
 F:\Csharp\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\Azure.Core.dll
 F:\Csharp\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\Azure.Identity.dll
 F:\Csharp\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\Humanizer.dll
@@ -110,3 +105,8 @@ F:\Csharp\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\runtimes\win-x86\na
 F:\Csharp\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 F:\Csharp\cadParceiros\cadParceiros\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 F:\Csharp\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.csproj.CopyComplete
+F:\Csharp\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.dll
+F:\Csharp\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\refint\cadParceiros.dll
+F:\Csharp\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.pdb
+F:\Csharp\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\cadParceiros.genruntimeconfig.cache
+F:\Csharp\cadParceiros\cadParceiros\obj\Debug\net6.0-windows\ref\cadParceiros.dll

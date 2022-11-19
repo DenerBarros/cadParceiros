@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using cadParceiros.Data;
 
@@ -10,9 +11,11 @@ using cadParceiros.Data;
 namespace cadParceiros.Migrations
 {
     [DbContext(typeof(MeuDBContext))]
-    partial class MeuDBContextModelSnapshot : ModelSnapshot
+    [Migration("20221119211025_bancov1.1")]
+    partial class bancov11
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -129,18 +132,20 @@ namespace cadParceiros.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Status")
+                    b.Property<int>("StatusCadastro")
                         .HasColumnType("int");
 
                     b.Property<string>("Telefone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TipoParceiro")
-                        .HasColumnType("int");
+                    b.Property<string>("TipoParceiro")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TipoPessoa")
-                        .HasColumnType("int");
+                    b.Property<string>("TipoPessoa")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
