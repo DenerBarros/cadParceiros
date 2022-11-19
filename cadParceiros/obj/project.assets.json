@@ -8,23 +8,23 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\dener.4022\\.nuget\\packages\\": {},
+    "C:\\Users\\dener\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dener\\CSharp\\cadParceiros\\cadParceiros\\cadParceiros.csproj",
+      "projectUniqueName": "F:\\Csharp\\cadParceiros\\cadParceiros\\cadParceiros.csproj",
       "projectName": "cadParceiros",
-      "projectPath": "C:\\Dener\\CSharp\\cadParceiros\\cadParceiros\\cadParceiros.csproj",
-      "packagesPath": "C:\\Users\\dener.4022\\.nuget\\packages\\",
-      "outputPath": "C:\\Dener\\CSharp\\cadParceiros\\cadParceiros\\obj\\",
+      "projectPath": "F:\\Csharp\\cadParceiros\\cadParceiros\\cadParceiros.csproj",
+      "packagesPath": "C:\\Users\\dener\\.nuget\\packages\\",
+      "outputPath": "F:\\Csharp\\cadParceiros\\cadParceiros\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\dener.4022\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dener\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,6 +33,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
