@@ -11,8 +11,8 @@ using cadParceiros.Data;
 namespace cadParceiros.Migrations
 {
     [DbContext(typeof(MeuDBContext))]
-    [Migration("20221119210426_bancov1")]
-    partial class bancov1
+    [Migration("20221120170610_bancov1.2")]
+    partial class bancov12
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -132,12 +132,18 @@ namespace cadParceiros.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("StatusCadastro")
+                    b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.Property<string>("Telefone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TipoParceiro")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TipoPessoa")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

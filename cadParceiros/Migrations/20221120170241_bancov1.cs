@@ -21,7 +21,9 @@ namespace cadParceiros.Migrations
                     Documento = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Telefone = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    StatusCadastro = table.Column<int>(type: "int", nullable: false)
+                    TipoParceiro = table.Column<int>(type: "int", nullable: false),
+                    TipoPessoa = table.Column<int>(type: "int", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
