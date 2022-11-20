@@ -19,18 +19,9 @@ namespace cadParceiros
             InitializeComponent();
                  
         }
+            
 
-       
-
-        private void Informar(string mensagem)
-        {
-            MessageBox.Show(mensagem, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private bool Confirmar(string pergunta)
-        {
-            return MessageBox.Show(pergunta, "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
-        }
+   
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -64,7 +55,8 @@ namespace cadParceiros
 
         private void tbEmailSolicitacao_TextChanged(object sender, EventArgs e)
         {
-            if (Email.Validar(tbEmailSolicitacao.Text))
+            
+            if (Email.Validar(tbEmailSolicitacao.Text) || Cnpj.Validar(tbEmailSolicitacao.Text))
                 tbEmailSolicitacao.BackColor = default(Color);
             else
                 tbEmailSolicitacao.BackColor = Color.Red;
@@ -72,7 +64,7 @@ namespace cadParceiros
 
         private void tbCPFCNPJ_TextChanged(object sender, EventArgs e)
         {
-            if(Cpf.Validar(tbCPFCNPJ.Text))
+            if(Cpf.Validar(tbCPFCNPJ.Text) || Cnpj.Validar(tbCPFCNPJ.Text))
                 tbCPFCNPJ.BackColor = default(Color);
             else
                 tbCPFCNPJ.BackColor = Color.Red;
@@ -238,6 +230,7 @@ namespace cadParceiros
             tbBairroE.Text = parceiro.EnderecoEntrega.Bairro;
             tbCidadeE.Text = parceiro.EnderecoEntrega.Cidade;
             tbEstadoE.Text = parceiro.EnderecoEntrega.Estado;
+            return false;
         }
     }
 }
