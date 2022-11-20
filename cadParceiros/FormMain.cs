@@ -242,8 +242,7 @@ namespace cadParceiros
         private void btnEmailCadastro_Click(object sender, EventArgs e)
         {
             parceiro = CriarParceiro();
-            parceiro.Status = Status.Solicitado;
-            Context.Parceiros.Add(parceiro);
+            parceiro.Status = Status.Solicitado;            
             Context.SaveChanges();
             carregarComponentesNaTela(parceiro);
             MessageBox.Show("Email enviado com sucesso !");
