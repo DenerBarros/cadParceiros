@@ -125,7 +125,7 @@ namespace cadParceiros
 
             if (parceiro.Status == Status.Cadastrado)
             {
-                btnCancelar.Enabled = false;
+                btnCancelar.Enabled = true;
                 btnEmailCadastro.Enabled = true;
                 btnCadastro.Enabled = true;
                 cbTipoParceiro.Enabled = true;
