@@ -9,6 +9,7 @@ namespace cadParceiros
 {
     public partial class FormMain : Form
     {
+        private const Status solicitado = Status.Solicitado;
         MeuDBContext Context = new MeuDBContext();
         private Parceiro parceiro = null;
 
@@ -150,11 +151,59 @@ namespace cadParceiros
 
         private void carregarComponentesNaTela(Parceiro parceiro) 
         {
-            if(parceiro.Status == Status.Cadastrado) 
-            {
+            
+            if (parceiro.Status == Status.Cadastrado) 
+            {         
+                btnCancelar.Enabled = false;
                 btnEmailCadastro.Enabled = true;
-            } else if(parceiro.Status == Status.Solicitado) {
+                btnCadastro.Enabled = true;
+                cbTipoParceiro.Enabled = true;
+                cbTipoPessoa.Enabled = true;
+                tbEmailSolicitacao.Enabled = true;
+                tbNomeParceiro.Enabled = true;
+                tbCPFCNPJ.Enabled = true;
+                tbEmail.Enabled = true;
+                tbTelefone.Enabled = true;
+                tbCepC.Enabled = true;
+                tbLogradouroC.Enabled = true;
+                tbNumeroC.Enabled = true;
+                tbBairroC.Enabled = true;
+                tbCidadeC.Enabled = true;
+                tbEstadoC.Enabled = true;
+                tbCepE.Enabled = true;
+                tbLogradouroE.Enabled = true;
+                tbNumeroE.Enabled = true;
+                tbBairroE.Enabled = true;
+                tbCidadeE.Enabled = true;
+                tbEstadoE.Enabled = true;
+
+            } else if(parceiro.Status == Status.Solicitado) 
+            {
                 btnCancelar.Enabled = true;
+                btnCadastro.Enabled = true;
+                btnCancelar.Enabled = false;
+                cbTipoParceiro.Enabled = false;
+                cbTipoPessoa.Enabled = false;
+                tbEmailSolicitacao.Enabled = false;
+                tbNomeParceiro.Enabled = false;
+                tbCPFCNPJ.Enabled = false;
+                tbEmail.Enabled = false;
+                tbTelefone.Enabled = false;
+                tbCepC.Enabled = false;
+                tbLogradouroC.Enabled = false;
+                tbNumeroC.Enabled = false;
+                tbBairroC.Enabled = false;
+                tbCidadeC.Enabled = false;
+                tbEstadoC.Enabled = false;
+                tbCepE.Enabled= false;
+                tbLogradouroE.Enabled = false;
+                tbNumeroE.Enabled = false;
+                tbBairroE.Enabled = false;
+                tbCidadeE.Enabled = false;
+                tbEstadoE.Enabled = false;
+            } else  if(parceiro.Status == Status.Cancelado) 
+            {
+                btnCadastro.Enabled = false;
             }
 
             
@@ -218,8 +267,8 @@ namespace cadParceiros
 
         private void btnEmailCadastro_Click(object sender, EventArgs e)
         {
-
-            parceiro.Status = Status.Solicitado;
+            
+            parceiro.Status = solicitado;
             Context.Parceiros.Update(parceiro);
             Context.SaveChanges();
             carregarComponentesNaTela(parceiro);
