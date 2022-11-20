@@ -16,8 +16,8 @@ namespace cadParceiros
 
         public FormMain()
         {
-            InitializeComponent();
-                 
+            InitializeComponent();           
+
         }
             
 
@@ -25,7 +25,7 @@ namespace cadParceiros
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -80,49 +80,62 @@ namespace cadParceiros
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-                 
-
-            var parceiro = new Parceiro
+            
+            if(ValidarCampos() == true)
             {
-                Email = tbEmail.Text,
-                Documento = tbCPFCNPJ.Text,
-                Nome = tbNomeParceiro.Text,
-                EmailSolicitacao = tbEmailSolicitacao.Text,
-                Telefone = tbTelefone.Text,
-                TipoParceiro = (TipoParceiro)Enum.Parse(typeof(TipoParceiro), cbTipoParceiro.SelectedItem.ToString()),
-                TipoPessoa = (TipoPessoa)Enum.Parse(typeof(TipoPessoa), cbTipoPessoa.SelectedItem.ToString()),                
-                Status = Status.Cadastrado,
-                EnderecoEntrega = new EnderecoEntrega { 
-                    Cep= tbCepE.Text,
-                    Bairro= tbBairroE.Text,
-                    Cidade= tbCidadeE.Text,
-                    Estado= tbEstadoE.Text,
-                    Logradouro= tbLogradouroE.Text,
-                    Numero= int.Parse(tbNumeroE.Text),                     
-
-                },
-                EnderecoCobranca = new EnderecoCobranca
+                var parceiro = new Parceiro
                 {
-                    Cep = tbCepC.Text,
-                    Bairro = tbBairroC.Text,
-                    Cidade = tbCidadeC.Text,
-                    Estado = tbEstadoC.Text,
-                    Logradouro = tbLogradouroC.Text,
-                    Numero = int.Parse(tbNumeroC.Text),
+                    Email = tbEmail.Text,
+                    Documento = tbCPFCNPJ.Text,
+                    Nome = tbNomeParceiro.Text,
+                    EmailSolicitacao = tbEmailSolicitacao.Text,
+                    Telefone = tbTelefone.Text,
+                    TipoParceiro = (TipoParceiro)Enum.Parse(typeof(TipoParceiro), cbTipoParceiro.SelectedItem.ToString()),
+                    TipoPessoa = (TipoPessoa)Enum.Parse(typeof(TipoPessoa), cbTipoPessoa.SelectedItem.ToString()),
+                    Status = Status.Cadastrado,
+                    EnderecoEntrega = new EnderecoEntrega
+                    {
+                        Cep = tbCepE.Text,
+                        Bairro = tbBairroE.Text,
+                        Cidade = tbCidadeE.Text,
+                        Estado = tbEstadoE.Text,
+                        Logradouro = tbLogradouroE.Text,
+                        Numero = int.Parse(tbNumeroE.Text),
 
-                }
+                    },
+                    EnderecoCobranca = new EnderecoCobranca
+                    {
+                        Cep = tbCepC.Text,
+                        Bairro = tbBairroC.Text,
+                        Cidade = tbCidadeC.Text,
+                        Estado = tbEstadoC.Text,
+                        Logradouro = tbLogradouroC.Text,
+                        Numero = int.Parse(tbNumeroC.Text),
 
-            };
+                    }
 
-            var firstParceiro = Context.Parceiros.FirstOrDefault(p => p.Documento == tbCPFCNPJ.Text);
-            if (firstParceiro is not null)
-            {
-                Context.Parceiros.Update(parceiro);
-                Context.SaveChanges();
-                return;
+                };
+
+                var firstParceiro = Context.Parceiros.FirstOrDefault(p => p.Documento == tbCPFCNPJ.Text);
+                if (firstParceiro is not null)
+                {
+                    Context.Parceiros.Update(parceiro);
+                    MessageBox.Show("Esse CPF ou CNPJ já existe, dados do Parceiro Atualizados com sucesso!");
+                    Context.SaveChanges();
+                    carregarComponentesNaTela(parceiro);
+                    return;
+                }                
+                    
+                    Context.Add(parceiro);
+                    Context.SaveChanges();
+                    MessageBox.Show("Usuário Cadastrado com sucesso");
+                    carregarComponentesNaTela(parceiro);
+
+
             }
-            Context.Add(parceiro);
-            Context.SaveChanges();
+
+            
+           
             
         }
 
@@ -144,7 +157,7 @@ namespace cadParceiros
                 btnCancelar.Enabled = true;
             }
 
-            lbId.Text = parceiro.Id.ToString();
+            
             cbStatus.SelectedIndex = (int)parceiro.Status;
             cbTipoParceiro.SelectedIndex = (int)parceiro.TipoParceiro;
             cbTipoPessoa.SelectedIndex = (int)parceiro.TipoPessoa;
@@ -187,10 +200,20 @@ namespace cadParceiros
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            parceiro.Status = Status.Cancelado;
-            Context.Parceiros.Update(parceiro);
-            Context.SaveChanges();
-            carregarComponentesNaTela(parceiro);
+            if(parceiro.Status == Status.Cadastrado) 
+            {
+                parceiro.Status = Status.Cancelado;
+                Context.Parceiros.Update(parceiro);
+                Context.SaveChanges();
+                MessageBox.Show("Usuário Cancelado com sucesso!");
+                carregarComponentesNaTela(parceiro);
+            } else 
+            if (parceiro.Status == Status.Solicitado) 
+            {
+                MessageBox.Show("Esse parceiro não pode ser cancelado!");
+                carregarComponentesNaTela(parceiro);
+            }
+           
         }
 
         private void btnEmailCadastro_Click(object sender, EventArgs e)
@@ -200,6 +223,7 @@ namespace cadParceiros
             Context.Parceiros.Update(parceiro);
             Context.SaveChanges();
             carregarComponentesNaTela(parceiro);
+            MessageBox.Show("Email enviado com sucesso !");
         }
 
         private void label22_Click(object sender, EventArgs e)
@@ -209,28 +233,110 @@ namespace cadParceiros
 
         private bool ValidarCampos()
         {
-            lbId.Text = parceiro.Id.ToString();
-            cbStatus.SelectedIndex = (int)parceiro.Status;
-            cbTipoParceiro.SelectedIndex = (int)parceiro.TipoParceiro;
-            cbTipoPessoa.SelectedIndex = (int)parceiro.TipoPessoa;
-            tbEmailSolicitacao.Text = parceiro.EmailSolicitacao;
-            tbNomeParceiro.Text = parceiro.Nome;
-            tbCPFCNPJ.Text = parceiro.Documento;
-            tbEmail.Text = parceiro.Email;
-            tbTelefone.Text = parceiro.Telefone;
-            tbCepC.Text = parceiro.EnderecoCobranca.Cep;
-            tbLogradouroC.Text = parceiro.EnderecoCobranca.Logradouro;
-            tbNumeroC.Text = parceiro.EnderecoCobranca.Numero.ToString();
-            tbBairroC.Text = parceiro.EnderecoCobranca.Bairro;
-            tbCidadeC.Text = parceiro.EnderecoCobranca.Cidade;
-            tbEstadoC.Text = parceiro.EnderecoCobranca.Estado;
-            tbCepE.Text = parceiro.EnderecoEntrega.Cep;
-            tbLogradouroE.Text = parceiro.EnderecoEntrega.Logradouro;
-            tbNumeroE.Text = parceiro.EnderecoEntrega.Numero.ToString();
-            tbBairroE.Text = parceiro.EnderecoEntrega.Bairro;
-            tbCidadeE.Text = parceiro.EnderecoEntrega.Cidade;
-            tbEstadoE.Text = parceiro.EnderecoEntrega.Estado;
-            return false;
+
+            if (cbTipoParceiro.SelectedIndex.ToString() == "")
+            {
+                MessageBox.Show("Informe se é Cliente ou Fornecedor");
+                cbTipoParceiro.Focus();
+                return false;
+            }
+            else
+            if (cbTipoPessoa.SelectedIndex.ToString() == "")
+            {
+                MessageBox.Show("Informe se é Pessoa Física ou Jurídica");
+                cbTipoPessoa.Focus();
+                return false;
+            }
+            else
+            if (tbEmailSolicitacao.Text == "")
+            {
+                MessageBox.Show("Informe o email de solicitação");
+                tbEmailSolicitacao.Focus();
+                return false;
+            }
+            else if (tbNomeParceiro.Text == "")
+            {
+                MessageBox.Show("Informe o Nome do Parceiro");
+                tbNomeParceiro.Focus();
+                return false;
+            } 
+            else 
+            if (tbCPFCNPJ.Text == "")
+            {
+                MessageBox.Show("Informe o Cpf ou Cnpj");
+                tbCPFCNPJ.Focus();
+                return false;
+            }
+            else
+            if (tbCepC.Text == "")
+            {
+                MessageBox.Show("Informe o CEP do endereço de Cobrança");
+                tbCepC.Focus();
+                return false;
+            } else
+            if (tbLogradouroC.Text == "")
+            {
+                MessageBox.Show("Informe o Logradouro de Cobrança");
+                tbLogradouroC.Focus();
+                return false;
+            }
+            else
+            if (tbNumeroC.Text == "")
+            {
+                MessageBox.Show("Informe o número do endereço de Cobrança");
+                tbNumeroC.Focus();
+                return false;
+            }
+            else
+            if (tbBairroC.Text == "")
+            {
+                MessageBox.Show("Informe o bairro do endereço de Cobrança");
+                tbBairroC.Focus();
+                return false;
+            }
+            else
+            if (tbEstadoC.Text == "")
+            {
+                MessageBox.Show("Informe o estado do endereço de Cobrança");
+                tbEstadoC.Focus();
+                return false;
+            }
+            else
+            if (tbCepE.Text == "")
+            {
+                MessageBox.Show("Informe o CEP do endereço de Entrega");
+                tbCepE.Focus();
+                return false;
+            }
+            else 
+            if (tbLogradouroE.Text == "")
+            {
+                MessageBox.Show("Informe o Logradouro de Entrega");
+                tbLogradouroE.Focus();
+                return false;
+            }
+            else
+            if (tbNumeroE.Text == "")
+            {
+                MessageBox.Show("Informe o número do endereço de Entrega");
+                tbNumeroE.Focus();
+                return false;
+            }
+            else
+            if (tbBairroE.Text == "")
+            {
+                MessageBox.Show("Informe o bairro do endereço de Entrega");
+                tbBairroE.Focus();
+                return false;
+            }
+            else
+            if (tbEstadoE.Text == "")
+            {
+                MessageBox.Show("Informe o estado do endereço de Entrega");
+                tbEstadoE.Focus();
+                return false;
+            }           
+            return true;
         }
     }
 }

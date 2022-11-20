@@ -76,7 +76,6 @@
             this.tbCPFCNPJ = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.cbxParceiros = new System.Windows.Forms.ComboBox();
-            this.lbId = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -472,7 +471,6 @@
             // 
             // btnCadastro
             // 
-            this.btnCadastro.Enabled = false;
             this.btnCadastro.Location = new System.Drawing.Point(231, 657);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(140, 23);
@@ -483,7 +481,6 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Enabled = false;
             this.btnCancelar.Location = new System.Drawing.Point(677, 657);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(157, 23);
@@ -494,7 +491,6 @@
             // 
             // btnEmailCadastro
             // 
-            this.btnEmailCadastro.Enabled = false;
             this.btnEmailCadastro.Location = new System.Drawing.Point(427, 657);
             this.btnEmailCadastro.Name = "btnEmailCadastro";
             this.btnEmailCadastro.Size = new System.Drawing.Size(223, 23);
@@ -531,22 +527,11 @@
             this.cbxParceiros.DropDown += new System.EventHandler(this.cbxParceiros_DropDown);
             this.cbxParceiros.SelectedIndexChanged += new System.EventHandler(this.cbxParceiros_SelectedIndexChanged);
             // 
-            // lbId
-            // 
-            this.lbId.AutoSize = true;
-            this.lbId.Location = new System.Drawing.Point(254, 48);
-            this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(124, 15);
-            this.lbId.TabIndex = 26;
-            this.lbId.Text = "Parceiros de Negócios";
-            this.lbId.Click += new System.EventHandler(this.label22_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 717);
-            this.Controls.Add(this.lbId);
             this.Controls.Add(this.cbxParceiros);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.btnEmailCadastro);
@@ -634,6 +619,5 @@
         private TextBox tbCPFCNPJ;
         private Label label21;
         private ComboBox cbxParceiros;
-        private Label lbId;
     }
 }
